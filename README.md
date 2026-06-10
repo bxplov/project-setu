@@ -1,10 +1,8 @@
 # Project SETU
 
+🌍 Live Demo: [Project SETU](https://project-setu-demonstration.vercel.app/)
+
 Project SETU is a free, offline-first emergency communication platform that works over local Wi-Fi on any smartphone browser without needing an internet connection. It allows people to chat, send GPS-based SOS alerts.
-
-## Project Demonstration
-
-[...]
 
 ## Tech Stack
 
