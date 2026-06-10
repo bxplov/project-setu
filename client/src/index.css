@@ -1,0 +1,53 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-noir-bg text-noir-text font-mono tracking-widest uppercase antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    background-color: #3b82f6;
+    animation: crt-flicker 0.15s infinite;
+  }
+
+  .map-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-black/20 border-l border-white/5;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 border border-white/20 rounded-none hover:bg-noir-accent/50 hover:border-noir-accent transition-colors shadow-[0_0_10px_rgba(255,255,255,0.1)];
+}
+
+@layer components {
+  /* Ultra-Premium Glass Panel */
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-2xl border border-white/5 border-t-white/20 border-l-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_0_0_1px_rgba(255,255,255,0.05)] rounded-2xl;
+  }
+}
